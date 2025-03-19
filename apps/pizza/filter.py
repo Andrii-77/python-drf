@@ -42,6 +42,6 @@ def filter_pizza(query: QueryDict) -> QuerySet:
                     raise ValidationError({'detail': f'Only allowed fields: {allowed_fields}.'})
                 qs = qs.order_by(v)
             case _:
-                raise ValidationError({'detail':f'"{k}" not allowed.'})
+                raise ValidationError({'detail': f'"{k}" not allowed.'})
 
     return qs
