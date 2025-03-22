@@ -1,4 +1,4 @@
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.generics import ListAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.request import Request
 
 from apps.pizza.filter import filter_pizza
@@ -6,7 +6,7 @@ from apps.pizza.models import PizzaModel
 from apps.pizza.serializers import PizzaSerializer
 
 
-class PizzaListCreateView(ListCreateAPIView):
+class PizzaListCreateView(ListAPIView):
     serializer_class = PizzaSerializer
 
     def get_queryset(self):
